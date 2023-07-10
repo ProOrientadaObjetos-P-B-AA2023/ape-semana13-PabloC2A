@@ -10,14 +10,11 @@ import paquete004.PagoLuzElectrica;
 import paquete004.PagoPredial;
 import paquete004.PagoTelefonoConvencional;
 
-/**
- *
- * @author reroes
- */
+
 public class BilleteraPagos {
     public Persona persona;
     public double gastoPagos;
-    public String mes;
+    public String mes; 
     public PagoAguaPotable aguaCasa;
     public PagoAguaPotable aguaComercio;
     public PagoLuzElectrica luzCasa;
@@ -26,13 +23,27 @@ public class BilleteraPagos {
     public PagoPredial casa2;
     public PagoTelefonoConvencional telefonoCasa;
     public PagoTelefonoConvencional telefonoFinca;
-    
-    public String toString(){
-        /*
-            Se debe presentar el reporte que incluya
-            información correspondiente oportuna
-        */
-        return "Presentar Reporte";
+
+    public BilleteraPagos() {
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
+    public Persona getPersona() {
+        return persona;
     }
     
+
+    @Override
+    public String toString() {
+        return String.format("""
+                      *---------- REPORTE ----------*
+                      -Cliente: %s %s
+                      -Cédula: %s
+                      """,
+                    this.persona.getNombre(),this.persona.getApellido(),
+                        this.persona.getCedula());
+    } 
 }

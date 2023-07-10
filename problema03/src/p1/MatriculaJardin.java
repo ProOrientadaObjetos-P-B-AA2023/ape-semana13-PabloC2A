@@ -1,24 +1,30 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package p1;
 
+import p2.Matricula;
+
 /**
  *
- * @author reroes
+ * @author Pablo
  */
-public class MatriculaJardin {
-    private double tarifa;
+public class MatriculaJardin extends Matricula{
+
+    public MatriculaJardin() {
+    }
     
-        
-    public void establecerTarifa(){
+
+    public MatriculaJardin(double tarifa) {
+        super(tarifa);
+    }
+
+    @Override
+    public void calcularTarifa() {
         // tarifa = costo desayunos + costo libros + costo paseos
-        tarifa = 50.2 + 140.2 + 40;
+        double tarifa = 50.2 + 140.2 + 40;
+        super.setTarifa(tarifa);
     }
-        
-    public double obtenerTarifa(){
-        return tarifa;
-    }
+    
 }
