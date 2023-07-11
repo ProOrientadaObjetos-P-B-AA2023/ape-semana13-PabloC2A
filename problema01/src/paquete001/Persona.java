@@ -1,4 +1,5 @@
 package paquete001;
+
 import paquete002.Ciudad;
 
 public class Persona {
@@ -6,7 +7,7 @@ public class Persona {
     private String apellido;
     private int edad;
     private String cedula;
-    private  Ciudad ciudad;
+    private Ciudad ciudad;
 
     public Persona() {
     }
@@ -61,17 +62,12 @@ public class Persona {
 
     @Override
     public String toString() {
-        return String.format("""
-                      *---------- DATOS CLIENTE ----------*
-                      -Nombre: %s
-                      -Apellido: %s
-                      -Edad: %d
-                      -Cédula: %s
-                      -Ciudad: %s
-                      """,
-                this.getNombre(),this.getApellido(),
-                this.getEdad(),this.getCedula(),
-                this.getCiudad().getNombreCiudad());
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", cedula='" + cedula + '\'' +
+                ", ciudad=" + ciudad +
+                '}';
     }
-    
 }

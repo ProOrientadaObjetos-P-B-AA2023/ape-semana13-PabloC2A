@@ -1,9 +1,9 @@
 package paquete005;
 
-import java.util.Scanner;
 import paquete001.Persona;
 import paquete002.Ciudad;
 
+import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class Principal {
             System.out.print("-Ingrese su número de cédula: ");
             cliente.setCedula(entrada.nextLine());
             System.out.print("-Ingrese su ciudad: ");
-            Ciudad ciudad = new Ciudad(entrada.nextLine()); 
+            Ciudad ciudad = new Ciudad(entrada.nextLine());
             cliente.setCiudad(ciudad);
 
 
@@ -48,16 +48,16 @@ public class Principal {
 
             switch (opcion_usuario) {
                 case 1 -> {
-                    
+
                 }
                 case 2 -> {
-                    
+
                 }
                 case 3 -> {
-                    
+
                 }
                 case 4 -> {
-                    
+
                 }
                 case 5 -> {
                     bandera = false;
