@@ -11,6 +11,13 @@ public class PagoLuzElectrica extends Pago{
     public PagoLuzElectrica() {
     }
 
+    public PagoLuzElectrica(double tarifaBase, double kilovatiosConsumidos, double costoKilovatio, Ciudad ciudad) {
+        this.tarifaBase = tarifaBase;
+        this.kilovatiosConsumidos = kilovatiosConsumidos;
+        this.costoKilovatio = costoKilovatio;
+        this.ciudad = ciudad;
+    }
+
     public PagoLuzElectrica(double pago, String mes, double tarifaBase, double kilovatiosConsumidos, double costoKilovatio, Ciudad ciudad) {
         super(pago, mes);
         this.tarifaBase = tarifaBase;

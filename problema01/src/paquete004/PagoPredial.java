@@ -1,28 +1,35 @@
 package paquete004;
 
+import paquete002.Propiedad;
+
 public class PagoPredial extends Pago{
-    double valorPropiedad;
-    double porcentaje;
+    private Propiedad propiedad;
+    private double porcentaje;
 
     public PagoPredial() {
     }
 
-    public PagoPredial(double pago, String mes, double valorPropiedad, double porcentaje) {
-        super(pago, mes);
-        this.valorPropiedad = valorPropiedad;
+    public PagoPredial(Propiedad propiedad, double porcentaje) {
+        this.propiedad = propiedad;
         this.porcentaje = porcentaje;
     }
 
-    public void setValorPropiedad(double valorPropiedad) {
-        this.valorPropiedad = valorPropiedad;
+    public PagoPredial(double pago, String mes, Propiedad propiedad, double porcentaje) {
+        super(pago, mes);
+        this.propiedad = propiedad;
+        this.porcentaje = porcentaje;
+    }
+
+    public void setPropiedad(Propiedad propiedad) {
+        this.propiedad = propiedad;
     }
 
     public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
     }
 
-    public double getValorPropiedad() {
-        return valorPropiedad;
+    public Propiedad getPropiedad() {
+        return propiedad;
     }
 
     public double getPorcentaje() {
@@ -31,13 +38,13 @@ public class PagoPredial extends Pago{
 
     @Override
     public void calcularPago() {
-        super.setPago(valorPropiedad - ((valorPropiedad*porcentaje)/100));
+        super.setPago(propiedad.getCostoPropiedad() - ((propiedad.getCostoPropiedad()*porcentaje)/100));
     }
 
     @Override
     public String toString() {
         return "PagoPredial{" +
-                "valorPropiedad=" + valorPropiedad +
+                "propiedad=" + propiedad +
                 ", porcentaje=" + porcentaje +
                 "} " + super.toString();
     }

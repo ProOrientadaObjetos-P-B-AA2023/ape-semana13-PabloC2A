@@ -9,6 +9,13 @@ public class PagoAguaPotable extends Pago{
     public PagoAguaPotable() {
     }
 
+    public PagoAguaPotable(double tarifaFija, double metrosCubicosConsumo, double costoConsumoCubicos, String tipo) {
+        this.tarifaFija = tarifaFija;
+        this.metrosCubicosConsumo = metrosCubicosConsumo;
+        this.costoConsumoCubicos = costoConsumoCubicos;
+        this.tipo = tipo;
+    }
+
     public PagoAguaPotable(double pago, String mes, double tarifaFija, double metrosCubicosConsumo, double costoConsumoCubicos, String tipo) {
         super(pago, mes);
         this.tarifaFija = tarifaFija;

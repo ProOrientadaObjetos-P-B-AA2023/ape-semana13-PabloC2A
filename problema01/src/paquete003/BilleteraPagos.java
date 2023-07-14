@@ -49,8 +49,14 @@ public class BilleteraPagos {
             *---------- REPORTE ----------*
             -Cliente: %s %s
             -Cédula: %s
+            -Ciudad: %s
+            -Lista de Pagos: %s
+            -Numero de Pagos: %d
+            -Gasto Total Pagos: %.2f
             """,
-                      this.persona.getNombre(),this.persona.getApellido(),
-                      this.persona.getCedula());
+            this.persona.getNombre(),this.persona.getApellido(),
+            this.persona.getCedula(),this.persona.getCiudad().getNombreCiudad(),
+            this.getListaPagos().toString(),listaPagos.size(),
+            calcularGastoTotalPagos.calcularGastoTotalPagosCliente(this.listaPagos));
     }
 }
